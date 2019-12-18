@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Time Tracker';
+  title: 'Time Tracker';
+  opened: false
+
+  get menuIcon(): string {
+    return this.opened ? 'menu_open' : 'menu';
+  }
 }
